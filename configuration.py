@@ -2,7 +2,7 @@ import configparser
 
 class ConfigurationHelper:
 
-    configFileName = '.accio'
+    configFileName = '~/.accio'
 
     def __init__(self):
         self.config = configparser.ConfigParser()
