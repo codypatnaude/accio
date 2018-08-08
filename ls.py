@@ -8,6 +8,11 @@ def listFiles(pattern):
     #read the file nicknames that have been added to the system
     conf = configuration.ConfigurationHelper()
     items = conf.getFiles()
+    
+    if not items:
+        print("No files have been added to the system yet. Use `add` to add files")
+        return
+
     maxLength = len(max(items, key=len))
 
     #filter out nicknames that don't match pattern

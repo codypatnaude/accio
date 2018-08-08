@@ -25,7 +25,7 @@ parser_rm.add_argument('fileNickName', help='nickName of file to run')
 parser_run = subparsers.add_parser('run')
 parser_run.add_argument('fileNickName', help='nickName of file to run')
 
-parser_editor = subparsers.add_parser('editor')
+parser_editor = subparsers.add_parser('editor', help="specify the editor you'd like to use: accio editor <command>")
 parser_editor.add_argument('cmd', help='command to run your editor of choice')
 
 
@@ -35,7 +35,7 @@ if args.command == 'ls':
     ls.listFiles(args.pattern)
 
 elif args.command == 'add':
-    print('adding a file' + args.file + ' with nickname ' + args.fileNickName)
+    print('adding a file ' + args.fileNickName + ' with nickname ' + args.file)
     print('./accio run ' + args.fileNickName + ' to retrive the file')
     config.writeFile(args.fileNickName, args.file)
 
@@ -49,5 +49,7 @@ elif args.command == 'editor':
 
 elif args.command == 'run':
     path = config.getFilePath(args.fileNickName)
-    print('opening ' + path)
-    os.system(config.getEditor() + ' ' + path + ' &')
+    
+    if path != False:
+        print('opening ' + path)
+        os.system(config.getEditor() + ' ' + path + ' &')

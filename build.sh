@@ -1,0 +1,1 @@
+pyinstaller --onefile accio.py --hidden-import pkgutil
