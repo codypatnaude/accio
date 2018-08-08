@@ -1,6 +1,6 @@
 # Accio
 ## What's accio?
-Accio is built as a simple way to open projects and files from the command line in you favorite editor. With Accio you can assign nick names to files, so once they're added there's no need to type out (or remember) full filepaths. Perfect for those pesky config files hidden in the heart of your system!
+Accio is a simple way to open projects and files from the command line in you favorite editor. With Accio you can assign nick names to files, so once they're added there's no need to type out (or remember) full filepaths. Perfect for those pesky config files hidden in the heart of your system!
 
 ## Setting your editor
 ```
