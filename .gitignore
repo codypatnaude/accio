@@ -1,3 +1,6 @@
-__pychache__
+__pycache__/*
 .vscode
 .accio
+accio.spec
+build/*
+dist/*
