@@ -12,12 +12,12 @@ accio editor code #sets the default editor to vs code
 ## Assigning nicknames to files
 
 ```
-accio add <filepath> <nickname>
+accio add <nickname> <filepath>
 
-accio add /etc/hosts hosts
-accio add /etc/apache2/sites-available/000-default.conf apache-vhosts
-accio add /etc/php/7.2/apache2/php.ini php.ini
-accio add /www/my/project/folder my-project
+accio add hosts /etc/hosts
+accio add apache-vhosts /etc/apache2/sites-available/000-default.conf
+accio add php.ini /etc/php/7.2/apache2/php.ini
+accio add my-project /www/my/project/folder
 ```
 ## Listing files added to accio
 

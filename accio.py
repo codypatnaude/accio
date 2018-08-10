@@ -15,9 +15,9 @@ subparsers = parser.add_subparsers(help='sub-command help', dest='command')
 parser_ls = subparsers.add_parser('ls', help='list files that have been added: accio ls [<pattern>]' )
 parser_ls.add_argument('pattern', help='pattern to match', nargs='?')
 
-parser_add = subparsers.add_parser('add', help='add a file: accio <filepath> <nickname>')
-parser_add.add_argument('file', help="file or folder")
+parser_add = subparsers.add_parser('add', help='add a file: accio <nickname> <filepath>')
 parser_add.add_argument('fileNickName', help="nick name for this item")
+parser_add.add_argument('file', help="file or folder")
 
 parser_rm = subparsers.add_parser('rm', help='remove a file: accio <nickname>')
 parser_rm.add_argument('fileNickName', help='nickName of file to run')
